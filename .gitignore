@@ -1,31 +1,32 @@
-# Node / JS (if using any)
-node_modules/
-npm-debug.log
-
-# Python files
-*.pyc
+# Ignore Python scripts not needed for the website
+*.py
 __pycache__/
-*.pyo
-*.pyd
 
-# IDE files
+# Ignore IDE and editor settings
 .vscode/
 .idea/
 *.sublime-project
 *.sublime-workspace
 
-# OS files
+# Ignore OS files
 .DS_Store
 Thumbs.db
 
-# Environment / config files (if any secrets)
+# Ignore logs and temp files
+*.log
+*.tmp
+
+# Ignore environment or config files with secrets
 .env
 config.py
 
-# Build / temporary files
-/dist/
-/build/
-*.log
+# Ignore build directories (if you use any static site generator)
+dist/
+build/
 
-# Optional: exclude local personal scripts
-text.py
+# Keep only the necessary files for GitHub Pages
+!index.html
+!style.css
+!script.js
+!portfolio_data.json
+!assets/**   # if you have images/icons folder

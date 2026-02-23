@@ -53,7 +53,7 @@ print("Portfolio data generated successfully!")
 
 """
 git add .
-git commit -m "Add minimalist tech-savvy portfolio"
+git commit -m "Add minimalist tech-savvy "
 git push origin main
 
 
