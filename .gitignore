@@ -1,0 +1,31 @@
+# Node / JS (if using any)
+node_modules/
+npm-debug.log
+
+# Python files
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+
+# IDE files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment / config files (if any secrets)
+.env
+config.py
+
+# Build / temporary files
+/dist/
+/build/
+*.log
+
+# Optional: exclude local personal scripts
+text.py
