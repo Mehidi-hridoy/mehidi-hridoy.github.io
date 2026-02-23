@@ -53,7 +53,7 @@ print("Portfolio data generated successfully!")
 
 """
 git add .
-git commit -m "Update portfolio with stunning design"
+git commit -m "Update portfolio with stunning designed"
 git push origin main
 
 """
