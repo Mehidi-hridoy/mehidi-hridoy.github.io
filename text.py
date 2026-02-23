@@ -51,8 +51,6 @@ with open('portfolio_data.json', 'w') as f:
 print("Portfolio data generated successfully!")
 
 
-
-
 """
 git add .
 git commit -m "Update portfolio with stunning design"
