@@ -148,7 +148,7 @@ const portfolioGrid = document.querySelector('.portfolio-grid');
 // Portfolio data
 const projects = [
     {
-        title: 'SkyJobs Portal',
+        title: 'SkyJobsuk.com',
         category: 'web',
         image: 'https://via.placeholder.com/600x400/2d2d2d/ffffff?text=SkyJobs',
         description: 'AI-powered job portal',
@@ -156,12 +156,11 @@ const projects = [
         link: 'https://github.com/mehidi-hridoy/skyjobs'
     },
     {
-        title: 'crm-bi',
-        category: 'crm',
+        title: 'kayacare',
+        category: 'ecommerce',
         image: 'https://via.placeholder.com/600x400/2d2d2d/ffffff?text=CRM-BI',
-        description: 'Business Intelligence CRM',
+        description: 'Beauty products marketplace',
         tags: ['Django', 'Power BI', 'SQL'],
-        link: 'https://github.com/mehidi-hridoy/crm-bi'
     },
     {
         title: 'tazkiyah_mart',
@@ -180,12 +179,12 @@ const projects = [
         link: 'https://github.com/mehidi-hridoy/Realstate_CRM'
     },
     {
-        title: 'dokan',
+        title: 'hotpot',
         category: 'ecommerce',
-        image: 'https://via.placeholder.com/600x400/2d2d2d/ffffff?text=Dokan',
-        description: 'Multi-vendor e-commerce',
+        image: 'https://via.placeholder.com/600x400/2d2d2d/ffffff?text=hotpot',
+        description: 'Online food ordering system and restaurant management system',
         tags: ['Django', 'AJAX', 'PostgreSQL'],
-        link: 'https://github.com/mehidi-hridoy/dokan'
+        link: 'https://hotpot-26d6223c9f58.herokuapp.com/'
     },
     {
         title: 'callanalysis',
