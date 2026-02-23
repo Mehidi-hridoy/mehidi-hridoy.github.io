@@ -34,7 +34,8 @@
         </div>
     </nav>
 
- <!-- Clean Hero Section with Code Surface -->
+
+<!-- Clean Hero Section with Code Surface and Profile Image -->
 <section id="home" class="hero">
     <div class="container">
         <div class="hero-content">
@@ -68,42 +69,64 @@
             </div>
         </div>
         
-        <!-- Code Surface Image Area -->
+        <!-- Code Surface with Profile Image -->
         <div class="hero-image">
             <div class="code-surface">
+                <!-- Profile Image Circle -->
+                <div class="profile-container">
+                    <div class="profile-image">
+                        <img src="https://media.licdn.com/dms/image/v2/D5622AQHwvhNGMPg3Dg/feedshare-shrink_1280/feedshare-shrink_1280/0/1703170053040?e=1773273600&v=beta&t=8Wjul4dvi2LVSK-iwe3CgxGRGEEc32k4fRzL1sxEKlU" alt="Mehidi Hridoy">
+                        <div class="profile-status"></div>
+                    </div>
+                    <div class="profile-tag">
+                        <span class="profile-name">mehidi-hridoy</span>
+                        <span class="profile-role">@developer</span>
+                    </div>
+                </div>
+                
                 <div class="code-window">
                     <div class="window-dots">
                         <span class="dot red"></span>
                         <span class="dot yellow"></span>
                         <span class="dot green"></span>
+                        <span class="window-title">developer_profile.py</span>
                     </div>
                     <div class="code-content">
-                        <pre><span class="line">1  <span class="keyword">import</span> <span class="module">django</span></span>
-<span class="line">2  <span class="keyword">from</span> <span class="module">django.db</span> <span class="keyword">import</span> <span class="class">models</span></span>
-<span class="line">3  </span>
-<span class="line">4  <span class="keyword">class</span> <span class="class">Project</span>(models.Model):</span>
-<span class="line">5      title = models.CharField(max_length=200)</span>
-<span class="line">6      tech_stack = models.JSONField()</span>
-<span class="line">7      <span class="function">def __str__(self):</span></span>
-<span class="line">8          <span class="keyword">return</span> <span class="string">f"{self.title}"</span></span>
-<span class="line">9  </span>
-<span class="line">10 <span class="comment"># 30+ projects completed</span></span>
-<span class="line">11 projects = Project.objects.<span class="function">count</span>()</span>
-<span class="line">12 <span class="function">print</span>(<span class="string">f"Ready to build yours: {projects}+"</span>)</span></pre>
+                        <pre><span class="line"><span class="keyword">class</span> <span class="class">Developer</span>:</span>
+<span class="line">    <span class="function">def __init__(self):</span></span>
+<span class="line">        self.name = <span class="string">"Mehidi Hridoy"</span></span>
+<span class="line">        self.role = <span class="string">"Django Developer & Data Analyst"</span></span>
+<span class="line">        self.location = <span class="string">"Dhaka, Bangladesh"</span></span>
+<span class="line">        self.experience = <span class="string">"5+ years"</span></span>
+<span class="line">        </span>
+<span class="line">    <span class="function">def get_skills(self):</span></span>
+<span class="line">        <span class="keyword">return</span> [</span>
+<span class="line">            <span class="string">"Python"</span>, <span class="string">"Django"</span>, <span class="string">"PostgreSQL"</span>,</span>
+<span class="line">            <span class="string">"Power BI"</span>, <span class="string">"SQL"</span>, <span class="string">"REST APIs"</span></span>
+<span class="line">        ]</span>
+<span class="line"></span>
+<span class="line"><span class="comment"># Ready for new opportunities</span></span>
+<span class="line">me = Developer()</span>
+<span class="line"><span class="keyword">if</span> you.need_developer():</span>
+<span class="line">    <span class="function">print</span>(<span class="string">"Let's connect!"</span>)</span></pre>
                     </div>
                 </div>
                 
-                <!-- Floating code elements -->
+                <!-- Floating tech stack badges -->
                 <div class="floating-code code-1">
                     <i class="fab fa-python"></i>
-                    <span>django==4.2</span>
+                    <span>Python 3.11</span>
                 </div>
                 <div class="floating-code code-2">
-                    <i class="fas fa-database"></i>
-                    <span>PostgreSQL 15</span>
+                    <i class="fab fa-django"></i>
+                    <span>Django 4.2</span>
                 </div>
                 <div class="floating-code code-3">
-                    <i class="fas fa-chart-line"></i>
+                    <i class="fas fa-database"></i>
+                    <span>PostgreSQL</span>
+                </div>
+                <div class="floating-code code-4">
+                    <i class="fas fa-chart-pie"></i>
                     <span>Power BI</span>
                 </div>
             </div>
@@ -112,7 +135,135 @@
 </section>
 
 
+
 <style>
+    /* Profile Image Styles */
+.profile-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 20px 10px 20px;
+    background: linear-gradient(135deg, rgba(0, 255, 157, 0.05), transparent);
+    border-bottom: 1px solid var(--border);
+}
+
+.profile-image {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid var(--accent);
+    padding: 3px;
+    background: var(--bg-primary);
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+}
+
+.profile-status {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    width: 12px;
+    height: 12px;
+    background: var(--accent);
+    border-radius: 50%;
+    border: 2px solid var(--bg-primary);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 255, 157, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(0, 255, 157, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 255, 157, 0);
+    }
+}
+
+.profile-tag {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-name {
+    font-family: var(--font-mono);
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--accent);
+}
+
+.profile-role {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+
+.window-title {
+    margin-left: auto;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+
+/* Update window dots to accommodate title */
+.window-dots {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 16px;
+    background: #1a1a1a;
+    border-bottom: 1px solid var(--border);
+}
+
+/* Add fourth floating element */
+.floating-code.code-4 {
+    bottom: 30%;
+    left: -25px;
+    animation-delay: 1.5s;
+}
+
+/* Update existing floating elements positions */
+.floating-code.code-1 {
+    top: -15px;
+    right: -15px;
+}
+
+.floating-code.code-2 {
+    bottom: 40%;
+    right: -20px;
+}
+
+.floating-code.code-3 {
+    top: 40%;
+    left: -20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .profile-container {
+        padding: 15px;
+    }
+    
+    .profile-image {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .floating-code.code-4 {
+        display: none; /* Hide extra floating element on mobile */
+    }
+}
     /* Hero Section with Code Surface */
 .hero .container {
     display: grid;
@@ -306,13 +457,16 @@
 }
 </style>
 
+
+
+
     <!-- Featured Project: SkyJobs - Minimal Showcase -->
     <section id="work" class="featured-section">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">// featured project</span>
-                <h2>SkyJobs<span class="accent">.uk</span></h2>
-                <p>AI-powered job portal transforming recruitment</p>
+                <h2>skyjobsuk<span class="accent">.com</span></h2>
+                <p>A comprehensive career development platform providing aviation and hospitality training, including cabin crew, ground operations, hotel management, and English communication programs backed by industry‑experienced instructors.</p>
             </div>
             
             <div class="featured-project">
@@ -577,7 +731,7 @@
                     <div class="social-mini">
                         <a href="https://www.linkedin.com/in/mehidihasanhridoy/" target="_blank"><i class="fab fa-linkedin"></i></a>
                         <a href="https://github.com/mehidi-hridoy" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="https://www.facebook.com/Mehidihhridoy" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.facebook.com/hridoymehidi" target="_blank"><i class="fab fa-facebook"></i></a>
                     </div>
                 </div>
                 
