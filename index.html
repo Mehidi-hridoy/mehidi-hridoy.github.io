@@ -1,58 +1,521 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Mehidi Hridoy | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mehidi Hridoy | Python Django Developer & Data Analyst</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Hero Section -->
-  <section id="hero">
-    <h1>Mehidi Hridoy</h1>
-    <p>Python (Django) Developer | Data Analytics | SQL | Power BI | Excel Automation</p>
-    <a href="#projects">View Projects</a>
-    <a href="https://www.linkedin.com/in/mehidihasanhridoy/">Connect with me</a>
-  </section>
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
 
-  <!-- About Me -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Adaptable professional combining business strategy (MBA) with technical expertise in Python, Django, SQL, and data analytics. Passionate about building backend systems, dashboards, and automation solutions.</p>
-    <div id="skills">
-      <span>Python</span>
-      <span>Django</span>
-      <span>PostgreSQL</span>
-      <span>SQL</span>
-      <span>Excel</span>
-      <span>Power BI</span>
-      <span>HTML/CSS</span>
-      <span>JavaScript</span>
-    </div>
-  </section>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h2>MH<span class="dot">.</span></h2>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#featured-projects">Featured</a></li>
+                <li><a href="#projects">Portfolio</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
 
-  <!-- Projects -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project-card">
-      <h3>tawhtawhaa_madarasa</h3>
-      <p>Online Islamic learning platform offering Quran recitations, Tadabbur, Sirah, Aqida courses, and student resources.</p>
-      <a href="https://github.com/mehidi-hridoy/tawhtawhaa_madarasa">View Repo</a>
-    </div>
-    <div class="project-card">
-      <h3>micro_service_API</h3>
-      <p>Backend microservice APIs built with Python.</p>
-      <a href="https://github.com/mehidi-hridoy/micro_service_API">View Repo</a>
-    </div>
-    <!-- Add more projects similarly -->
-  </section>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="greeting">👋 Welcome to my portfolio</span>
+                <h1 class="glitch" data-text="Mehidi Hridoy">Mehidi Hridoy</h1>
+                <div class="typed-container">
+                    <span class="typed-text"></span>
+                </div>
+                <p class="hero-description">
+                    Building scalable web applications and transforming data into actionable insights. 
+                    Specialized in Django, CRM systems, E-commerce solutions, and job portals.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#featured-projects" class="btn primary-btn">View Featured Projects <i class="fas fa-arrow-right"></i></a>
+                    <a href="#contact" class="btn secondary-btn">Hire Me <i class="fas fa-briefcase"></i></a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="30">0</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="15">0</span>
+                        <span class="stat-label">Clients</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="98">0</span>
+                        <span class="stat-label">Success Rate</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="floating-card">
+                    <i class="fas fa-code"></i>
+                </div>
+                <div class="floating-card">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <div class="floating-card">
+                    <i class="fas fa-database"></i>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Contact -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <a href="https://www.linkedin.com/in/mehidihasanhridoy/">LinkedIn</a>
-    <a href="https://www.facebook.com/MehidiHhridoy">Facebook</a>
-    <a href="https://www.pinterest.com/mehidihasanhridoy">Pinterest</a>
-    <a href="mailto:your-email@example.com">Email Me</a>
-  </section>
+    <!-- Featured Project: SkyJobs -->
+    <section id="featured-projects" class="featured-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">🚀 Featured Project</span>
+                <h2>SkyJobs - <span class="highlight">Job Portal Platform</span></h2>
+                <p>Revolutionizing the job search experience in Bangladesh</p>
+            </div>
+            
+            <div class="featured-project skyjobs">
+                <div class="project-showcase">
+                    <div class="showcase-content">
+                        <div class="project-badge">🌟 Premium Project</div>
+                        <h3>SkyJobs Portal</h3>
+                        <p class="project-description">
+                            A comprehensive job portal connecting talented professionals with top companies. 
+                            Features AI-powered job matching, real-time application tracking, and advanced analytics.
+                        </p>
+                        
+                        <div class="key-features">
+                            <div class="feature">
+                                <i class="fas fa-robot"></i>
+                                <span>AI Job Matching</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-chart-pie"></i>
+                                <span>Analytics Dashboard</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-bolt"></i>
+                                <span>Real-time Updates</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Secure Authentication</span>
+                            </div>
+                        </div>
+                        
+                        <div class="tech-stack">
+                            <span class="tech-tag">Django</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">Redis</span>
+                            <span class="tech-tag">Celery</span>
+                            <span class="tech-tag">Bootstrap 5</span>
+                        </div>
+                        
+                        <div class="project-stats">
+                            <div class="stat">
+                                <span class="stat-value">5K+</span>
+                                <span class="stat-label">Active Users</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">200+</span>
+                                <span class="stat-label">Companies</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">1K+</span>
+                                <span class="stat-label">Jobs Posted</span>
+                            </div>
+                        </div>
+                        
+                        <div class="project-links">
+                            <a href="https://github.com/mehidi-hridoy/skyjobs" class="btn primary-btn" target="_blank">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                            <a href="#" class="btn secondary-btn" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                    <div class="showcase-image">
+                        <img src="https://via.placeholder.com/600x400/2d2d2d/ffffff?text=SkyJobs+Dashboard" alt="SkyJobs Dashboard" id="skyjobs-img">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                <i class="fas fa-play-circle"></i>
+                                <span>See in Action</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CRM & E-commerce Showcase -->
+    <section class="crm-ecommerce-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">💼 Business Solutions</span>
+                <h2>CRM & E-commerce <span class="highlight">Mastery</span></h2>
+                <p>Powerful business tools that drive growth and efficiency</p>
+            </div>
+            
+            <div class="business-grid">
+                <!-- CRM Projects -->
+                <div class="business-card crm-card">
+                    <div class="card-header">
+                        <i class="fas fa-users-cog"></i>
+                        <h3>CRM Systems</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="project-mini-card">
+                            <h4>crm-bi</h4>
+                            <p>Business Intelligence CRM with predictive analytics and sales forecasting</p>
+                            <div class="mini-tags">
+                                <span>Django</span>
+                                <span>Power BI</span>
+                                <span>PostgreSQL</span>
+                            </div>
+                        </div>
+                        <div class="project-mini-card">
+                            <h4>Realstate_CRM</h4>
+                            <p>Real estate management with property tracking and client management</p>
+                            <div class="mini-tags">
+                                <span>Python</span>
+                                <span>Django</span>
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- E-commerce Projects -->
+                <div class="business-card ecommerce-card">
+                    <div class="card-header">
+                        <i class="fas fa-shopping-cart"></i>
+                        <h3>E-commerce Solutions</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="project-mini-card">
+                            <h4>tazkiyah_mart</h4>
+                            <p>Islamic products marketplace with secure payment gateway</p>
+                            <div class="mini-tags">
+                                <span>Django</span>
+                                <span>Stripe</span>
+                                <span>Redis</span>
+                            </div>
+                        </div>
+                        <div class="project-mini-card">
+                            <h4>dokan</h4>
+                            <p>Multi-vendor e-commerce platform with real-time inventory</p>
+                            <div class="mini-tags">
+                                <span>Python</span>
+                                <span>Django</span>
+                                <span>AJAX</span>
+                            </div>
+                        </div>
+                        <div class="project-mini-card">
+                            <h4>wow-perfume</h4>
+                            <p>Specialized perfume retail with recommendation engine</p>
+                            <div class="mini-tags">
+                                <span>JavaScript</span>
+                                <span>Django</span>
+                                <span>SQL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">⚡ What I Offer</span>
+                <h2>Services That <span class="highlight">Drive Results</span></h2>
+                <p>End-to-end solutions from concept to deployment</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Django Development</h3>
+                    <p>Custom web applications, APIs, and admin panels with best practices and security</p>
+                    <ul class="service-features">
+                        <li>✓ Custom CRM Systems</li>
+                        <li>✓ E-commerce Platforms</li>
+                        <li>✓ Job Portals</li>
+                        <li>✓ REST APIs</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Data Analytics</h3>
+                    <p>Transform raw data into actionable insights with interactive dashboards</p>
+                    <ul class="service-features">
+                        <li>✓ Power BI Dashboards</li>
+                        <li>✓ Business Intelligence</li>
+                        <li>✓ Excel Automation</li>
+                        <li>✓ Data Visualization</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Database Solutions</h3>
+                    <p>Efficient database design, optimization, and management</p>
+                    <ul class="service-features">
+                        <li>✓ SQL Optimization</li>
+                        <li>✓ PostgreSQL</li>
+                        <li>✓ Database Design</li>
+                        <li>✓ Data Migration</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Grid -->
+    <section id="projects" class="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">📁 My Work</span>
+                <h2>Recent <span class="highlight">Projects</span></h2>
+                <p>A showcase of my latest development work</p>
+            </div>
+            
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web Apps</button>
+                <button class="filter-btn" data-filter="crm">CRM</button>
+                <button class="filter-btn" data-filter="ecommerce">E-commerce</button>
+                <button class="filter-btn" data-filter="analytics">Analytics</button>
+            </div>
+            
+            <div class="portfolio-grid">
+                <!-- Project items will be loaded via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">🔧 Expertise</span>
+                <h2>Technical <span class="highlight">Skills</span></h2>
+            </div>
+            
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Backend Development</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span>Python/Django</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>REST APIs</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>PostgreSQL</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 88%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Data & Analytics</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span>Power BI</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 92%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>SQL</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Excel Automation</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Frontend & Tools</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span>HTML/CSS/JS</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Git/GitHub</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Bootstrap</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 88%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">💬 Client Feedback</span>
+                <h2>What <span class="highlight">Clients Say</span></h2>
+            </div>
+            
+            <div class="testimonial-slider">
+                <div class="testimonial-card">
+                    <div class="quote"><i class="fas fa-quote-right"></i></div>
+                    <p>"Mehidi developed our complete CRM system from scratch. The attention to detail and business understanding was impressive. Our sales team loves the dashboard!"</p>
+                    <div class="client-info">
+                        <div class="client-avatar">R</div>
+                        <div class="client-details">
+                            <h4>Rafiq Ahmed</h4>
+                            <span>CEO, RealEstate BD</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="quote"><i class="fas fa-quote-right"></i></div>
+                    <p>"The e-commerce platform built by Mehidi increased our online sales by 200%. The admin panel is so intuitive that our team adapted in just 2 days."</p>
+                    <div class="client-info">
+                        <div class="client-avatar">S</div>
+                        <div class="client-details">
+                            <h4>Sultana Rahman</h4>
+                            <span>Owner, Tazkiyah Mart</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">📬 Let's Talk</span>
+                <h2>Ready to Start Your <span class="highlight">Project?</span></h2>
+                <p>Have an idea? Let's discuss how I can help you achieve your goals</p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Dhaka, Bangladesh</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>mehidi.hridoy@example.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Available</h4>
+                            <p>Mon - Sat, 9AM - 8PM</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/mehidihasanhridoy/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/mehidi-hridoy" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.facebook.com/Mehidihhridoy" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.pinterest.com/mehidihasanhridoy" target="_blank"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <select required>
+                            <option value="" disabled selected>Project Type</option>
+                            <option value="crm">CRM System</option>
+                            <option value="ecommerce">E-commerce</option>
+                            <option value="job-portal">Job Portal</option>
+                            <option value="analytics">Data Analytics</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Tell me about your project..." rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn primary-btn">Send Message <i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Mehidi Hridoy. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,34 @@
+{
+  "stats": {
+    "total_projects": 25,
+    "completed_projects": 22,
+    "active_projects": 3,
+    "technologies": {
+      "python": 20,
+      "django": 18,
+      "javascript": 12,
+      "sql": 15,
+      "powerbi": 8
+    },
+    "categories": {
+      "crm": 5,
+      "ecommerce": 4,
+      "web_apps": 8,
+      "analytics": 6,
+      "job_portals": 2
+    }
+  },
+  "skills": {
+    "python": 95,
+    "django": 92,
+    "sql": 88,
+    "powerbi": 85,
+    "javascript": 80,
+    "html_css": 85,
+    "git": 90,
+    "postgresql": 88,
+    "redis": 75,
+    "excel": 82
+  },
+  "last_updated": "2026-02-23T12:54:11.065464"
+}
