@@ -147,7 +147,7 @@ const projects = [
         title: 'SkyJobs',
         category: 'web',
         image: 'https://www.skyjobsuk.com/static/images/skyjobs_slider1.jpg',
-        description: 'AI-powered job portal connecting professionals with top companies',
+        description: 'A comprehensive career development platform providing aviation and hospitality training',
         tags: ['Django', 'PostgreSQL', 'Redis', 'Celery'],
         link: 'https://www.skyjobsuk.com/',
         github: 'https://github.com/mehidi-hridoy/skyjobs',
