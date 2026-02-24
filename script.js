@@ -245,7 +245,6 @@ const projects = [
 ];
 
 
-
 // Display Portfolio
 const portfolioGrid = document.getElementById('portfolio-grid');
 const filterBtns = document.querySelectorAll('.filter-btn');
@@ -435,4 +434,14 @@ window.addEventListener('resize', () => {
         const navLinks = document.querySelector('.nav-links');
         if (navLinks) navLinks.style.display = 'flex';
     }
+});
+
+
+
+// Add to script.js
+VanillaTilt.init(document.querySelector(".code-surface"), {
+    max: 15,
+    speed: 400,
+    glare: true,
+    "max-glare": 0.3,
 });

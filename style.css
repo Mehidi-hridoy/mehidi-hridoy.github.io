@@ -129,7 +129,7 @@ body {
 }
 
 .hero h1 {
-    font-size: 72px;
+    font-size: 65px;
     font-weight: 700;
     line-height: 1.1;
     margin-bottom: 20px;
@@ -1263,3 +1263,507 @@ footer p {
 }
 
 
+/* ===== SKILLS SPOTLIGHT SECTION - EYE-CATCHING STYLES ===== */
+
+.skills-spotlight {
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--bg-primary) 0%, #0a1920 100%);
+}
+
+/* Animated background grid */
+.skills-spotlight::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        linear-gradient(rgba(0, 255, 157, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 255, 157, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: gridMove 20s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes gridMove {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(50px); }
+}
+
+/* Floating orbs */
+.skills-spotlight::after {
+    content: '';
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(0, 255, 157, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    filter: blur(50px);
+    animation: orbFloat 15s ease-in-out infinite;
+}
+
+@keyframes orbFloat {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(-50px, 50px); }
+}
+
+/* Section header animation */
+.skills-spotlight .section-header {
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+    z-index: 2;
+}
+
+.skills-spotlight .section-tag {
+    display: inline-block;
+    font-family: var(--font-mono);
+    color: var(--accent);
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    position: relative;
+    padding: 0 20px;
+}
+
+.skills-spotlight .section-tag::before,
+.skills-spotlight .section-tag::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 30px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+}
+
+.skills-spotlight .section-tag::before {
+    left: -30px;
+}
+
+.skills-spotlight .section-tag::after {
+    right: -30px;
+}
+
+.skills-spotlight h2 {
+    font-size: 48px;
+    font-weight: 700;
+    margin: 0;
+    background: linear-gradient(135deg, #fff 0%, var(--accent) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+    display: inline-block;
+}
+
+/* Expertise Grid */
+.expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    position: relative;
+    z-index: 2;
+    perspective: 1000px;
+}
+
+/* Expertise Card - Main Styles */
+.expertise-card {
+    background: rgba(10, 25, 30, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 255, 157, 0.2);
+    border-radius: 30px;
+    padding: 40px 30px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    z-index: 1;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Holographic effect on hover */
+.expertise-card:hover {
+    transform: translateY(-20px) rotateX(5deg) rotateY(5deg);
+    border-color: var(--accent);
+    box-shadow: 
+        0 30px 60px rgba(0, 255, 157, 0.3),
+        inset 0 0 30px rgba(0, 255, 157, 0.1);
+}
+
+/* Animated border gradient */
+.expertise-card::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, 
+        transparent 0%, 
+        var(--accent) 25%, 
+        transparent 50%, 
+        var(--accent) 75%, 
+        transparent 100%);
+    border-radius: 32px;
+    opacity: 0;
+    transition: opacity 0.5s;
+    z-index: -1;
+    animation: borderRotate 4s linear infinite;
+}
+
+.expertise-card:hover::before {
+    opacity: 0.3;
+}
+
+@keyframes borderRotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Card shine effect */
+.expertise-card::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -60%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(0, 255, 157, 0.1),
+        transparent
+    );
+    transform: rotate(45deg);
+    transition: all 0.5s;
+    opacity: 0;
+}
+
+.expertise-card:hover::after {
+    opacity: 1;
+    left: 100%;
+    transition: all 0.8s ease-in-out;
+}
+
+/* Expertise Icon */
+.expertise-icon {
+    width: 90px;
+    height: 90px;
+    background: linear-gradient(135deg, rgba(0, 255, 157, 0.2), rgba(0, 255, 157, 0.05));
+    border: 2px solid var(--accent);
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    position: relative;
+    transition: all 0.3s;
+    box-shadow: 0 0 20px rgba(0, 255, 157, 0.2);
+}
+
+.expertise-card:hover .expertise-icon {
+    transform: scale(1.1) rotate(10deg);
+    background: var(--accent);
+    box-shadow: 0 0 40px var(--accent);
+}
+
+.expertise-icon i {
+    font-size: 45px;
+    color: var(--accent);
+    transition: all 0.3s;
+}
+
+.expertise-card:hover .expertise-icon i {
+    color: var(--bg-primary);
+    transform: scale(1.1);
+}
+
+/* Pulsing effect on icon */
+.expertise-icon::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    border: 2px solid var(--accent);
+    animation: pulseRing 2s infinite;
+}
+
+@keyframes pulseRing {
+    0% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+/* Card Title */
+.expertise-card h3 {
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0 0 15px 0;
+    color: #fff;
+    position: relative;
+    display: inline-block;
+}
+
+.expertise-card h3::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent);
+    transition: width 0.3s;
+    box-shadow: 0 0 10px var(--accent);
+}
+
+.expertise-card:hover h3::after {
+    width: 100%;
+}
+
+/* Description */
+.expertise-card p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin: 0 0 25px 0;
+    min-height: 60px;
+}
+
+/* Skills Container */
+.expertise-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+/* Skill Badges - Ultra Eye-catching */
+.skill-badge {
+    display: inline-block;
+    padding: 8px 18px;
+    background: linear-gradient(135deg, rgba(0, 255, 157, 0.1), rgba(0, 255, 157, 0.05));
+    border: 1px solid rgba(0, 255, 157, 0.3);
+    border-radius: 30px;
+    font-size: 14px;
+    font-family: var(--font-mono);
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s;
+    z-index: 1;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+/* Glow effect on badges */
+.skill-badge::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+    z-index: -1;
+    opacity: 0;
+}
+
+.skill-badge:hover {
+    color: var(--bg-primary);
+    border-color: var(--accent);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 255, 157, 0.4);
+    background: transparent;
+}
+
+.skill-badge:hover::before {
+    width: 300px;
+    height: 300px;
+    opacity: 1;
+}
+
+/* Different animation delays for each badge */
+.skill-badge:nth-child(1) { animation: badgeFloat 3s infinite 0s; }
+.skill-badge:nth-child(2) { animation: badgeFloat 3s infinite 0.2s; }
+.skill-badge:nth-child(3) { animation: badgeFloat 3s infinite 0.4s; }
+.skill-badge:nth-child(4) { animation: badgeFloat 3s infinite 0.6s; }
+.skill-badge:nth-child(5) { animation: badgeFloat 3s infinite 0.8s; }
+.skill-badge:nth-child(6) { animation: badgeFloat 3s infinite 1s; }
+
+@keyframes badgeFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Glass morphism effect on cards */
+.expertise-card {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* Counter for each card */
+.expertise-card::before {
+    counter-reset: card;
+}
+
+/* Number indicator on card corner */
+.expertise-card .card-number {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-family: var(--font-mono);
+    font-size: 40px;
+    font-weight: 700;
+    color: rgba(0, 255, 157, 0.1);
+    transition: all 0.3s;
+}
+
+.expertise-card:hover .card-number {
+    color: rgba(0, 255, 157, 0.3);
+    transform: scale(1.2);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .expertise-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .skills-spotlight h2 {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .expertise-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .skills-spotlight {
+        padding: 60px 0;
+    }
+    
+    .skills-spotlight h2 {
+        font-size: 32px;
+    }
+    
+    .expertise-card {
+        padding: 30px 20px;
+    }
+    
+    .expertise-icon {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .expertise-icon i {
+        font-size: 35px;
+    }
+    
+    .expertise-card h3 {
+        font-size: 24px;
+    }
+    
+    .skill-badge {
+        padding: 6px 14px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .expertise-skills {
+        gap: 8px;
+    }
+    
+    .skill-badge {
+        padding: 5px 12px;
+        font-size: 11px;
+    }
+}
+
+/* Dark mode optimization */
+@media (prefers-color-scheme: dark) {
+    .expertise-card {
+        background: rgba(5, 15, 20, 0.9);
+    }
+}
+
+/* Add smooth entrance animation */
+.expertise-card {
+    animation: cardEntrance 0.8s ease-out;
+    animation-fill-mode: both;
+    opacity: 0;
+}
+
+.expertise-card:nth-child(1) { animation-delay: 0.1s; }
+.expertise-card:nth-child(2) { animation-delay: 0.3s; }
+.expertise-card:nth-child(3) { animation-delay: 0.5s; }
+
+@keyframes cardEntrance {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Parallax depth effect on scroll */
+.expertise-card {
+    transition: transform 0.5s;
+}
+
+.expertise-card:hover {
+    transform: 
+        translateY(-20px) 
+        rotateX(5deg) 
+        rotateY(5deg) 
+        scale(1.02);
+}
+
+/* Add floating particles inside cards */
+.expertise-card .particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: var(--accent);
+    border-radius: 50%;
+    opacity: 0;
+    animation: particleFloat 10s infinite;
+}
+
+@keyframes particleFloat {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(-100px) rotate(360deg);
+        opacity: 0;
+    }
+}
