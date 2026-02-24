@@ -72,6 +72,8 @@ const typedText = document.querySelector('.typed-text');
 const words = [
     'python django developer',
     'data analyst',
+    'business intelligence analyst',
+    'autiomation engineer',
     'crm specialist',
     'e-commerce expert',
     'api architect'
