@@ -11,17 +11,6 @@
 
 
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-9QVCKKVV8S"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-9QVCKKVV8S');
-</script>
-
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mehidi Hridoy | Sales & Data Leader</title>
@@ -2429,78 +2418,70 @@
                         <div><i class="fas fa-briefcase"></i> Open to: Sales Leadership · Business Development · Sales Operations</div>
                     </div>
                     
-                     <div class="social-mini">
+                     <!-- Social Buttons -->
+<div class="social-mini">
+  <a href="https://www.linkedin.com/in/mehidihasanhridoy/" target="_blank" id="linkedinBtn">
+    <i class="fab fa-linkedin"></i>
+  </a>
 
-                    <a href="https://www.linkedin.com/in/mehidihasanhridoy/" target="_blank">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
+  <a href="https://github.com/mehidi-hridoy" target="_blank" id="githubBtn">
+    <i class="fab fa-github"></i>
+  </a>
 
-                    <a href="https://github.com/mehidi-hridoy" target="_blank">
-                        <i class="fab fa-github"></i>
-                    </a>
+  <a href="https://sothasia.academia.edu/MehidiHasanHridoy" target="_blank" id="academiaBtn">
+    <i class="fas fa-graduation-cap"></i>
+  </a>
 
-                    <a href="https://sothasia.academia.edu/MehidiHasanHridoy" target="_blank">
-                        <i class="fas fa-graduation-cap"></i>
-                    </a>
+  <a href="mailto:hridoy21.21@gmail.com" id="emailBtn">
+    <i class="fas fa-envelope"></i>
+  </a>
 
-                    <a href="mailto:hridoy21.21@gmail.com">
-                        <i class="fas fa-envelope"></i>
-                    </a>
+  <a href="https://www.facebook.com/hridoymehidi" target="_blank" id="facebookBtn">
+    <i class="fab fa-facebook"></i>
+  </a>
 
-                    <!-- Facebook Profile -->
-                    <a href="https://www.facebook.com/hridoymehidi" 
-                    target="_blank" 
-                    id="facebookBtn">
-                        <i class="fab fa-facebook"></i>
-                    </a>
+  <a href="https://wa.me/8801927127018?text=Hi%20I%20want%20to%20discuss%20a%20web%20automation%20project" 
+     target="_blank" id="whatsappBtn">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+</div>
 
-                    <!-- WhatsApp Direct Chat -->
-                <a href="https://wa.me/8801927127018?text=Hi%20I%20want%20to%20discuss%20a%20web%20automation%20project" 
-                    target="_blank" 
-                    id="whatsappBtn">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>
+<!-- GA4 Tracking + Social Button Clicks -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9QVCKKVV8S"></script>
 <script>
-  // Helper function to track button clicks
+  // GA4 config
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-9QVCKKVV8S');
+
+  // Track button clicks with anonymous client info
   function trackButtonClick(buttonName) {
     gtag('event', 'social_click', {
       'button_name': buttonName,
       'page_url': window.location.href,
-      'page_title': document.title
+      'page_title': document.title,
+      'device_type': navigator.userAgent,
+      'screen_width': window.innerWidth
     });
   }
 
-  // Attach events to your buttons
   const socialButtons = {
     'linkedinBtn': 'LinkedIn',
     'githubBtn': 'GitHub',
-    'facebookBtn': 'Facebook',
-    'whatsappBtn': 'WhatsApp',
+    'academiaBtn': 'Academia',
     'emailBtn': 'Email',
-    'academiaBtn': 'Academia'
+    'facebookBtn': 'Facebook',
+    'whatsappBtn': 'WhatsApp'
   };
 
-  // Add IDs to buttons that don't already have one
-  document.querySelectorAll('a').forEach((el) => {
-    if(el.href.includes('linkedin.com')) el.id = 'linkedinBtn';
-    if(el.href.includes('github.com')) el.id = 'githubBtn';
-    if(el.href.includes('facebook.com')) el.id = 'facebookBtn';
-    if(el.href.includes('wa.me')) el.id = 'whatsappBtn';
-    if(el.href.includes('mailto:')) el.id = 'emailBtn';
-    if(el.href.includes('sothasia.academia.edu')) el.id = 'academiaBtn';
-  });
-
-  // Attach click events
   Object.keys(socialButtons).forEach(id => {
     const btn = document.getElementById(id);
     if(btn) {
-      btn.addEventListener('click', () => {
-        trackButtonClick(socialButtons[id]);
-      });
+      btn.addEventListener('click', () => trackButtonClick(socialButtons[id]));
     }
   });
 </script>
-                </div>
                 </div>
                 
                 <form class="contact-form-mini" id="contactForm">
