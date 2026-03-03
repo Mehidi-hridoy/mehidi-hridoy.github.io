@@ -169,7 +169,7 @@
             align-items: center;
             gap: clamp(5px, 1.5vw, 10px);
             margin: clamp(15px, 3vw, 20px) 0;
-            font-size: clamp(18px, 3.5vw, 32px);
+            font-size: clamp(18px, 3.5vw, 28px);
             font-family: var(--font-mono);
             background: rgba(0, 0, 0, 0.3);
             padding: clamp(10px, 2vw, 15px) clamp(15px, 3vw, 25px);
@@ -2868,13 +2868,16 @@
         skillBars.forEach(bar => skillObserver.observe(bar));
 
         // Vanilla Tilt for code surface
-        VanillaTilt.init(document.querySelector(".code-surface"), {
-            max: 15,
-            speed: 400,
+       VanillaTilt.init(document.querySelector(".code-surface"), {
+            max: 3,              // less rotation = more professional
+            speed: 1500,         // slower response
+            scale: 1.02,
             glare: true,
-            "max-glare": 0.3,
+            "max-glare": 0.15,
+            perspective: 1400,   // deeper 3D
+            easing: "cubic-bezier(.03,.98,.52,.99)"
         });
-
+        
         // Window Load
         window.addEventListener('load', () => {
             document.body.classList.add('loaded');
