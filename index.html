@@ -2431,37 +2431,76 @@
                     
                      <div class="social-mini">
 
-    <a href="https://www.linkedin.com/in/mehidihasanhridoy/" target="_blank">
-        <i class="fab fa-linkedin"></i>
-    </a>
+                    <a href="https://www.linkedin.com/in/mehidihasanhridoy/" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
 
-    <a href="https://github.com/mehidi-hridoy" target="_blank">
-        <i class="fab fa-github"></i>
-    </a>
+                    <a href="https://github.com/mehidi-hridoy" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
 
-    <a href="https://sothasia.academia.edu/MehidiHasanHridoy" target="_blank">
-        <i class="fas fa-graduation-cap"></i>
-    </a>
+                    <a href="https://sothasia.academia.edu/MehidiHasanHridoy" target="_blank">
+                        <i class="fas fa-graduation-cap"></i>
+                    </a>
 
-    <a href="mailto:hridoy21.21@gmail.com">
-        <i class="fas fa-envelope"></i>
-    </a>
+                    <a href="mailto:hridoy21.21@gmail.com">
+                        <i class="fas fa-envelope"></i>
+                    </a>
 
-    <!-- Facebook Profile -->
-    <a href="https://www.facebook.com/hridoymehidi" 
-       target="_blank" 
-       id="facebookBtn">
-        <i class="fab fa-facebook"></i>
-    </a>
+                    <!-- Facebook Profile -->
+                    <a href="https://www.facebook.com/hridoymehidi" 
+                    target="_blank" 
+                    id="facebookBtn">
+                        <i class="fab fa-facebook"></i>
+                    </a>
 
-    <!-- WhatsApp Direct Chat -->
-   <a href="https://wa.me/8801927127018?text=Hi%20I%20want%20to%20discuss%20a%20web%20automation%20project" 
-    target="_blank" 
-    id="whatsappBtn">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+                    <!-- WhatsApp Direct Chat -->
+                <a href="https://wa.me/8801927127018?text=Hi%20I%20want%20to%20discuss%20a%20web%20automation%20project" 
+                    target="_blank" 
+                    id="whatsappBtn">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+<script>
+  // Helper function to track button clicks
+  function trackButtonClick(buttonName) {
+    gtag('event', 'social_click', {
+      'button_name': buttonName,
+      'page_url': window.location.href,
+      'page_title': document.title
+    });
+  }
 
-</div>
+  // Attach events to your buttons
+  const socialButtons = {
+    'linkedinBtn': 'LinkedIn',
+    'githubBtn': 'GitHub',
+    'facebookBtn': 'Facebook',
+    'whatsappBtn': 'WhatsApp',
+    'emailBtn': 'Email',
+    'academiaBtn': 'Academia'
+  };
+
+  // Add IDs to buttons that don't already have one
+  document.querySelectorAll('a').forEach((el) => {
+    if(el.href.includes('linkedin.com')) el.id = 'linkedinBtn';
+    if(el.href.includes('github.com')) el.id = 'githubBtn';
+    if(el.href.includes('facebook.com')) el.id = 'facebookBtn';
+    if(el.href.includes('wa.me')) el.id = 'whatsappBtn';
+    if(el.href.includes('mailto:')) el.id = 'emailBtn';
+    if(el.href.includes('sothasia.academia.edu')) el.id = 'academiaBtn';
+  });
+
+  // Attach click events
+  Object.keys(socialButtons).forEach(id => {
+    const btn = document.getElementById(id);
+    if(btn) {
+      btn.addEventListener('click', () => {
+        trackButtonClick(socialButtons[id]);
+      });
+    }
+  });
+</script>
+                </div>
                 </div>
                 
                 <form class="contact-form-mini" id="contactForm">
